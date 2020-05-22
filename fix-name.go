@@ -29,7 +29,7 @@ func main() {
 	}
 	origFilename := os.Args[1]
 
-	re := regexp.MustCompile(`_(\d{6})(\d{2})_\d{8}\.ts$`)
+	re := regexp.MustCompile(`_(\d{8})_(\d{8})\.ts$`)
 	newFilename := re.ReplaceAllString(origFilename, " - S${1}E${2}.ts")
 	fmt.Println("New filename will be", newFilename)
 	success := true
